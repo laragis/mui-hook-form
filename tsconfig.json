@@ -1,5 +1,20 @@
 {
   "extends": "@laragis/tsconfig/library.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tsup.config.js",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules"
+  ]
 }

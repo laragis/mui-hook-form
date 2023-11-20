@@ -1,14 +1,14 @@
 {
-  "name": "@laragis/tsup-library-template",
+  "name": "@laragis/mui-hook-form",
   "version": "0.0.1",
-  "description": "A template for building a library with tsup",
+  "description": "React Hook Form for Material UI",
   "keywords": [
-    "tsup",
-    "npm",
-    "template",
-    "typescript"
+    "material-ui",
+    "react-hook-form",
+    "react",
+    "form"
   ],
-  "repository": "github:laragis/tsup-library-template",
+  "repository": "https://github.com/laragis/mui-hook-form",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -38,21 +38,38 @@
     "clean": "rimraf ./build",
     "dev": "tsup --watch",
     "test": "vitest run",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "yalc:watch": "concurrently --kill-others \"tsup --watch\" \"nodemon -e js --watch build --delay 500ms --exec yalc push --changed\""
   },
   "devDependencies": {
-    "@laragis/tsconfig": "github:laragis/tsconfig",
-    "@laragis/tsup-config": "^0.0.1",
+    "@laragis/tsconfig": "^0.0.1",
+    "@laragis/tsup-config": "^0.0.3",
     "@types/node": "^20.9.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "esbuild-plugin-file-path-extensions": "^1.0.0",
+    "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.1",
     "tsup": "^8.0.0",
     "type-fest": "^4.8.1",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "yalc": "1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"
