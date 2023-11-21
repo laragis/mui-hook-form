@@ -5,7 +5,9 @@
     "experimentalSpecifierResolution": "node"
   },
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "include": [
     "src/**/*.ts",

@@ -39,17 +39,18 @@
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "yalc:watch": "concurrently --kill-others \"tsup --watch\" \"nodemon -e js --watch build --delay 500ms --exec yalc push --changed\""
+    "yalc:watch": "concurrently --kill-others \"tsup --watch\" \"nodemon -e js --watch build --delay 300ms --exec yalc push --changed\""
   },
   "devDependencies": {
     "@laragis/tsconfig": "^0.0.1",
-    "@laragis/tsup-config": "^0.0.3",
+    "@laragis/tsup-config": "^0.0.1",
+    "@mui/material": "^5.14.18",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20.9.1",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
-    "esbuild-plugin-file-path-extensions": "^1.0.0",
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
     "react": "^18.2.0",
@@ -63,6 +64,7 @@
     "yalc": "1.0.0-pre.53"
   },
   "peerDependencies": {
+    "@mui/material": ">= 5.x <6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -76,5 +78,8 @@
   },
   "authors": [
     "Truong Thanh Tung <ttungbmt@gmail.com> (https://github.com/ttungbmt)"
-  ]
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
